@@ -34,5 +34,19 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(section);
     });
 
-    // Navbar scroll effect removed for floating design
+    // Hide logo on scroll
+    const logo = document.querySelector('.logo');
+    let lastScroll = 0;
+
+    window.addEventListener('scroll', () => {
+        const currentScroll = window.pageYOffset;
+
+        if (currentScroll > 100) {
+            logo.classList.add('hidden');
+        } else {
+            logo.classList.remove('hidden');
+        }
+
+        lastScroll = currentScroll;
+    });
 });
