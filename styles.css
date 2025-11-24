@@ -706,8 +706,8 @@ footer {
     /* Hero Section */
     .hero {
         min-height: 70vh;
-        padding: 24rem 0 4rem;
-        /* Increased from 18rem to fix overlap */
+        padding: 28rem 0 4rem;
+        /* Increased to 28rem (~15% more) */
     }
 
     .hero-content {
