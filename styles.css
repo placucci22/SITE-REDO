@@ -275,7 +275,7 @@ a {
     max-width: 1000px;
     /* Wider to match cinematic feel */
     padding: 0 2rem;
-    animation: fadeUp 1s ease-out;
+    /* animation: fadeUp 1s ease-out; Removed to prevent overlap */
 }
 
 .hero h1 {
