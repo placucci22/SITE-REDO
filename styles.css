@@ -143,14 +143,6 @@ a {
     /* Visual adjustment to ignore transparent whitespace */
     margin-top: -25px;
     margin-left: -20px;
-    opacity: 1;
-    transition: opacity 0.3s ease, transform 0.3s ease;
-}
-
-.logo.hidden img {
-    opacity: 0;
-    transform: scale(0.8);
-    pointer-events: none;
 }
 
 .nav-links {
@@ -168,7 +160,7 @@ a {
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     border: 1px solid rgba(255, 255, 255, 0.15);
-    border-radius: 20px;
+    border-radius: 100px;
     padding: 0.8rem 3rem;
     margin: 0;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
@@ -205,7 +197,7 @@ a {
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     border: 1px solid rgba(255, 255, 255, 0.15);
-    border-radius: 20px;
+    border-radius: 50px;
     font-size: 0.85rem;
     font-weight: 600;
     text-transform: uppercase;
@@ -275,7 +267,7 @@ a {
     max-width: 1000px;
     /* Wider to match cinematic feel */
     padding: 0 2rem;
-    /* animation: fadeUp 1s ease-out; Removed to prevent overlap */
+    animation: fadeUp 1s ease-out;
 }
 
 .hero h1 {
@@ -611,21 +603,13 @@ footer {
    ============================================ */
 
 /* Tablet & Small Desktop (768px - 1024px) */
-/* Tablet & Small Desktop (768px - 1366px) - Covers iPad Air & Pro */
-@media (max-width: 1366px) {
+@media (max-width: 1024px) {
     .container {
-        padding: 0 2rem;
+        padding: 0 1.5rem;
     }
 
     h1 {
         font-size: 3rem;
-    }
-
-    .hero h1 {
-        font-size: 3.5rem;
-        /* Reduced from 5rem to prevent cutoff */
-        padding: 0 1rem;
-        /* Extra safety padding */
     }
 
     h2 {
@@ -663,7 +647,7 @@ footer {
     nav {
         padding: 1rem 1.5rem;
         flex-direction: column;
-        gap: 0;
+        gap: 1rem;
         align-items: center;
     }
 
@@ -676,8 +660,6 @@ footer {
         height: 80px !important;
         margin-top: 0 !important;
         margin-left: 0 !important;
-        margin-bottom: -50px !important;
-        /* Aggressive negative margin */
     }
 
     .nav-links {
@@ -706,8 +688,7 @@ footer {
     /* Hero Section */
     .hero {
         min-height: 70vh;
-        padding: 28rem 0 4rem;
-        /* Increased to 28rem (~15% more) */
+        padding: 16rem 0 4rem;
     }
 
     .hero-content {
@@ -810,168 +791,158 @@ footer {
         font-size: 2rem;
     }
 
-    .hero h1 {
-        font-size: 1.8rem;
-        /* Smaller for narrow screens like S8+ */
-    }
-
     h2 {
         font-size: 1.5rem;
     }
-}
 
-h2 {
-    font-size: 1.5rem;
-}
+    .container {
+        padding: 0 0.75rem;
+    }
 
-.container {
-    padding: 0 0.75rem;
-}
+    .section {
+        padding: 3rem 0;
+    }
 
-.section {
-    padding: 3rem 0;
-}
+    /* Navbar */
+    nav {
+        padding: 0.75rem 1rem;
+        gap: 0.75rem;
+    }
 
-/* Navbar */
-nav {
-    padding: 0.75rem 1rem;
-    gap: 0.75rem;
-}
+    .logo-container img {
+        height: 60px !important;
+    }
 
-.logo-container img {
-    height: 60px !important;
-}
+    .nav-links {
+        flex-direction: column;
+        gap: 0.75rem;
+        padding: 1rem;
+        max-width: 100%;
+    }
 
-.nav-links {
-    flex-direction: column;
-    gap: 0.75rem;
-    padding: 1rem;
-    max-width: 100%;
-}
+    .nav-links a {
+        font-size: 0.85rem;
+        padding: 0.5rem 0;
+        width: 100%;
+        text-align: center;
+    }
 
-.nav-links a {
-    font-size: 0.85rem;
-    padding: 0.5rem 0;
-    width: 100%;
-    text-align: center;
-}
+    .nav-cta {
+        max-width: 100%;
+        padding: 0.75rem 1.5rem;
+        font-size: 0.85rem;
+    }
 
-.nav-cta {
-    max-width: 100%;
-    padding: 0.75rem 1.5rem;
-    font-size: 0.85rem;
-}
+    /* Hero */
+    .hero {
+        min-height: 60vh;
+        padding: 14rem 0 3rem;
+    }
 
-/* Hero */
-.hero {
-    min-height: 60vh;
-    padding: 14rem 0 3rem;
-}
+    .hero h1 {
+        font-size: 1.75rem;
+        line-height: 1.2;
+    }
 
-.hero h1 {
-    font-size: 1.75rem;
-    line-height: 1.2;
-}
+    .hero p {
+        font-size: 0.9rem;
+    }
 
-.hero p {
-    font-size: 0.9rem;
-}
+    .cta-button {
+        padding: 0.875rem 2rem;
+        font-size: 0.9rem;
+    }
 
-.cta-button {
-    padding: 0.875rem 2rem;
-    font-size: 0.9rem;
-}
+    /* Portfolio */
+    .portfolio-scroll {
+        gap: 1rem;
+        padding: 0 0.75rem 1.5rem;
+    }
 
-/* Portfolio */
-.portfolio-scroll {
-    gap: 1rem;
-    padding: 0 0.75rem 1.5rem;
-}
+    .portfolio-item {
+        min-width: 280px;
+        width: 280px;
+        height: 280px;
+    }
 
-.portfolio-item {
-    min-width: 280px;
-    width: 280px;
-    height: 280px;
-}
+    .portfolio-info {
+        padding: 1rem;
+    }
 
-.portfolio-info {
-    padding: 1rem;
-}
+    .portfolio-info h3 {
+        font-size: 1.1rem;
+        margin-bottom: 0.5rem;
+    }
 
-.portfolio-info h3 {
-    font-size: 1.1rem;
-    margin-bottom: 0.5rem;
-}
+    .portfolio-info .client {
+        font-size: 0.75rem;
+        margin-bottom: 0.5rem;
+    }
 
-.portfolio-info .client {
-    font-size: 0.75rem;
-    margin-bottom: 0.5rem;
-}
+    .portfolio-info .meta-info p {
+        font-size: 0.7rem;
+        margin-bottom: 0.25rem;
+    }
 
-.portfolio-info .meta-info p {
-    font-size: 0.7rem;
-    margin-bottom: 0.25rem;
-}
+    .portfolio-info .award {
+        font-size: 0.75rem;
+    }
 
-.portfolio-info .award {
-    font-size: 0.75rem;
-}
+    /* Services */
+    .service-card {
+        padding: 1.5rem;
+    }
 
-/* Services */
-.service-card {
-    padding: 1.5rem;
-}
+    .service-card h3 {
+        font-size: 1.25rem;
+        margin-bottom: 0.75rem;
+    }
 
-.service-card h3 {
-    font-size: 1.25rem;
-    margin-bottom: 0.75rem;
-}
+    .service-card p {
+        font-size: 0.9rem;
+    }
 
-.service-card p {
-    font-size: 0.9rem;
-}
+    /* About */
+    .about h2 {
+        margin-bottom: 1rem;
+    }
 
-/* About */
-.about h2 {
-    margin-bottom: 1rem;
-}
+    /* Contact */
+    .contact h2 {
+        margin-bottom: 1.5rem;
+    }
 
-/* Contact */
-.contact h2 {
-    margin-bottom: 1.5rem;
-}
+    .contact-pill {
+        max-width: 100%;
+        padding: 0.875rem 1.5rem;
+        font-size: 0.9rem;
+    }
 
-.contact-pill {
-    max-width: 100%;
-    padding: 0.875rem 1.5rem;
-    font-size: 0.9rem;
-}
+    .contact-pill svg {
+        width: 18px;
+        height: 18px;
+    }
 
-.contact-pill svg {
-    width: 18px;
-    height: 18px;
-}
+    .form-group {
+        margin-bottom: 1rem;
+    }
 
-.form-group {
-    margin-bottom: 1rem;
-}
+    .form-group input,
+    .form-group textarea {
+        padding: 0.875rem;
+        font-size: 0.95rem;
+    }
 
-.form-group input,
-.form-group textarea {
-    padding: 0.875rem;
-    font-size: 0.95rem;
-}
+    button[type="submit"] {
+        padding: 0.875rem;
+        font-size: 0.95rem;
+    }
 
-button[type="submit"] {
-    padding: 0.875rem;
-    font-size: 0.95rem;
-}
-
-/* Footer */
-footer {
-    padding: 2rem 0;
-    font-size: 0.85rem;
-}
+    /* Footer */
+    footer {
+        padding: 2rem 0;
+        font-size: 0.85rem;
+    }
 }
 
 /* Extra Small Devices (360px and below) */
