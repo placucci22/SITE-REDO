@@ -804,7 +804,7 @@ footer {
     }
 
     /* Navbar */
-    nav {
+    .navbar {
         position: absolute;
         padding: 0.75rem 1rem;
         gap: 0.75rem;
