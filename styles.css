@@ -668,8 +668,8 @@ footer {
         height: 80px !important;
         margin-top: 0 !important;
         margin-left: 0 !important;
-        margin-bottom: -20px !important;
-        /* Negative margin to reduce space */
+        margin-bottom: -50px !important;
+        /* Aggressive negative margin */
     }
 
     .nav-links {
@@ -698,7 +698,7 @@ footer {
     /* Hero Section */
     .hero {
         min-height: 70vh;
-        padding: 15rem 0 4rem;
+        padding: 18rem 0 4rem;
     }
 
     .hero-content {
